@@ -13,11 +13,21 @@ const codes = [
 
 function init() {
   // your code here
+  let index = 0;
   const main = document.querySelector('body');
-  main.addEventListener('keydown', (event) => {
-    const keyName = event.key;
-    if (keyName === 10){
-    alert("Key Pressed");
+  main.addEventListener('keydown', function onKeyDownHandler(e) {
+  const key = e.key;
+ 
+  if (key === alphabet[index]) {
+    index++;
+ 
+    if (index === alphabet.length) {
+      alert("Hurray!");
+ 
+      index = 0;
+    }
+  } else {
+    index = 0;
   }
-  })
+})
 }
