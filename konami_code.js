@@ -16,6 +16,8 @@ function init() {
   const main = document.querySelector('body');
   main.addEventListener('keydown', (event) => {
     const keyName = event.key;
+    if (keyName === 10){
     alert("Key Pressed");
+  }
   })
 }
